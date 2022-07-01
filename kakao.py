@@ -52,10 +52,7 @@ def solution(alp, cop, problems):
                     if (problems[i][3]/problems[i][4] > ali and (problems[i][3])/problems[i][4]) > 1:
                         ali = (problems[i][3])/problems[i][4]
                         num = i
-
-
-
-        
+                        
         elif cop1 >= copFin:
             if problems[num][2] > (alpFin-alp1):
                 for j in range(lenP):
@@ -71,7 +68,6 @@ def solution(alp, cop, problems):
                         alii = (problems[i][2])/problems[i][4]
                         num = i
 
-        
         else:
             for i in range(lenP):
                 if problems[i][0] <= alp1 and problems[i][1] <=cop1:
@@ -79,12 +75,9 @@ def solution(alp, cop, problems):
                         al = (problems[i][2] + problems[i][3])/problems[i][4]
                         num = i
 
-
-
         alp1 = alp1 + problems[num][2]
         cop1 = cop1 + problems[num][3]
         answer = answer + problems[num][4]
-
 
         if alp1 >= alpFin and cop1 >=copFin:
             return answer
