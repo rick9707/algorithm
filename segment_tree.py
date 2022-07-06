@@ -35,13 +35,6 @@ def interval_sum(start, end, index, left, right):
     return interval_sum(start, mid, index * 2, left, right) + interval_sum(mid + 1, end, index * 2 + 1, left, right)
 
 
-# <특정 원소의 값을 수정하는 함수>
-# 특정 원소를 수정하면 구간 합이 당연히 달라진다.
-# 이때, 해당 원소를 포함하고 있는 모든 구간 합 노드들을 갱신해주면 된다. 
-# (즉, 전체가 아닌 부분적인 노드들만 바꿔주면 된다!)
-# start : 시작 인덱스, end : 마지막 인덱스
-# what : 구간 합을 수정하고자 하는 노드
-# value : 수정할 값
 def update(start, end, index, what, value):
     # 범위 밖에 있는 경우
     if what < start or what > end:
