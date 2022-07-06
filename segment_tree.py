@@ -50,9 +50,6 @@ def update(start, end, index, what, value):
 
 init(0, len(arr) - 1, 1)
 print(tree)
-# print(interval_sum(0, len(arr) - 1, 1, 0, 9))  # 0부터 9까지의 구간 합 (1 + 2 + ... + 9 + 10)
-# print(interval_sum(0, len(arr) - 1, 1, 0, 2))  # 0부터 2까지의 구간 합 (1 + 2 + 3)
-# print(interval_sum(0, len(arr) - 1, 1, 6, 7))  # 0부터 2까지의 구간 합 (7 + 8)
 
 # # arr[0]을 +4만큼 수정
 # update(0, len(arr) - 1, 1, 0, 4)
