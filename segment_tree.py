@@ -21,6 +21,7 @@ def init(start, end, index):
 
 # <구간 합을 구하는 함수>
 # start : 시작 인덱스, end : 마지막 인덱스
+
 # left, right : 구간 합을 구하고자 하는 범위
 def interval_sum(start, end, index, left, right):
     # 범위 밖에 있는 경우
@@ -39,23 +40,21 @@ def update(start, end, index, what, value):
     # 범위 밖에 있는 경우
     if what < start or what > end:
         return
-    # 범위 안에 있으면 내려가면서 다른 원소도 갱신
+    # 범위 안에 있으면 내려가면서 다른 원소도 갱신s
     tree[index] += value
     if start == end:
         return
     mid = (start + end) // 2
     update(start, mid, index * 2, what, value)
+
     update(mid + 1, end, index * 2 + 1, what, value)
 
 
 init(0, len(arr) - 1, 1)
 print(tree)
 
-# # arr[0]을 +4만큼 수정
-# update(0, len(arr) - 1, 1, 0, 4)
 update(0, len(arr) - 1, 1, 9, -11)
 print(tree)
-# print(interval_sum(0, len(arr) - 1, 1, 0, 2))   # 0부터 2까지의 구간 합 ((1 + 4) + 2 + 3)
 
 # # arr[9]를 -11만큼 수정
 update(0, len(arr) - 1, 1, 9, -11)
