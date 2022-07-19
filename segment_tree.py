@@ -40,7 +40,6 @@ def update(start, end, index, what, value):
     # 범위 밖에 있는 경우
     if what < start or what > end:
         return
-    # 범위 안에 있으면 내려가면서 다른 원소도 갱신s
     tree[index] += value
     if start == end:
         return
@@ -58,4 +57,3 @@ print(tree)
 
 # # arr[9]를 -11만큼 수정
 update(0, len(arr) - 1, 1, 9, -11)
-# print(interval_sum(0, len(arr) - 1, 1, 8, 9))   # 8부터 9까지의 구간 합 (9 + (10 - 11))
